@@ -1,0 +1,5 @@
+#! /bin/bash
+
+function umts {
+  cd $HOME/umts/$1/
+}
