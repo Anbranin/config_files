@@ -1,0 +1,28 @@
+Host app3 af-transit-app3.admin.umass.edu
+  Hostname af-transit-app3.admin.umass.edu
+  ProxyCommand ssh -q umasstransit.org nc %h 22
+  User karin
+
+Host umts 128.119.98.49 umasstransit.org
+  Hostname umasstransit.org
+  User karin
+
+Host droplet 104.131.162.130
+  Hostname 104.131.162.130
+  User karin
+
+Host bus-rodeo umasstransit.rodeo
+  Hostname umasstransit.rodeo
+  User karin
+
+Host st-rodeo st.umasstransit.rodeo
+  Hostname st.umasstransit.rodeo
+  User karin
+
+Host umaps-rails 128.119.9.7 umaps-web1.oit.umass.edu
+  Hostname umaps-web1.oit.umass.edu
+  User gslinski
+
+Host probable-engine 128.119.9.8 umaps-web2.oit.umass.edu
+  Hostname umaps-web1.oit.umass.edu
+  User keichelm
