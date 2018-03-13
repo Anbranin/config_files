@@ -5,6 +5,8 @@
 syntax enable
 set nocompatible               " be iMproved
 
+runtime macros/matchit.vim
+
 filetype off                   " required!
 let mapleader = ","
 nnoremap <leader><space> :noh<cr>
@@ -15,6 +17,7 @@ nnoremap <leader>h <C-w>s<C-w>j
 nnoremap <leader>f :CtrlP<CR>
 nmap <Tab> %
 vmap <Tab> %
+map <C-n> :NERDTreeToggle<CR>
 inoremap jk <ESC>l
 nnoremap <leader>i gg=G''
 nnoremap <leader>de gg"_dG
@@ -88,8 +91,12 @@ call vundle#end()
 colorscheme default
 filetype plugin indent on     " required!
 " highlight any lines you've added to which are longer than 80 characters.
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#502929
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=darkred ctermfg=white guibg=#502929
+" match OverLength /\%81v.\+/
+"
+" highlight the first character of any line over 80
+highlight ColorColumn ctermbg=red
+call matchadd('ColorColumn', '\%81v', 100)
 "
 " Brief help
 " :BundleList          - list configured bundles
