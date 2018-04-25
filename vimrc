@@ -61,6 +61,8 @@ set backspace=indent,eol,start
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_show_hidden = 1
+let g:syntastic_eruby_ruby_quiet_messages = 
+  \ {"regex": "possibly useless use of a variable in void context"}
 set guifont=Inconsolata:h12:cANSI
 call vundle#begin()
 
