@@ -60,9 +60,14 @@ set timeoutlen=100
 set backspace=indent,eol,start
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/ctrlp.vim
+set listchars=tab:␉·
+" Highlight tabs as errors.
+" https://vi.stackexchange.com/a/9353/3168
+match Error /\t/
 let g:ctrlp_show_hidden = 1
 let g:syntastic_eruby_ruby_quiet_messages = 
   \ {"regex": "possibly useless use of a variable in void context"}
+let g:syntastic_javascript_checkers = ['eslint']
 set guifont=Inconsolata:h12:cANSI
 call vundle#begin()
 
@@ -81,11 +86,13 @@ Bundle 'vim-ruby/vim-ruby.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'scrooloose/syntastic.git'
-Bundle 'jiangmiao/auto-pairs.git'
+" Bundle 'jiangmiao/auto-pairs.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'duff/vim-scratch.git'
+Bundle 'ngmy/vim-rubocop'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'kchmck/vim-coffee-script'
 " vim-scripts repos
 " Bundle 'bufexplorer.zip'
 Bundle 'HTML-AutoCloseTag'
