@@ -99,11 +99,11 @@ Bundle 'HTML-AutoCloseTag'
 call vundle#end()
 colorscheme default
 filetype plugin indent on     " required!
-" highlight any lines you've added to which are longer than 80 characters.
+" highlight any lines you've added to which are longer than 100 characters.
 " highlight OverLength ctermbg=darkred ctermfg=white guibg=#502929
-" match OverLength /\%81v.\+/
+" match OverLength /\%101v.\+/
 "
-" highlight the first character of any line over 80
+" highlight the first character of any line over 100
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%81v', 100)
 "
